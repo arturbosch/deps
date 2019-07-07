@@ -10,9 +10,17 @@ Leverages maven-resolver to resolve transitive dependencies.
 
 ### with Gradle
 
-`implementation("io.gitlab.arturbosch:deps:[version]")`
+```
+repositories {
+    maven { url "https://dl.bintray.com/arturbosch/generic" }
+}
+
+implementation("io.gitlab.arturbosch:deps:[version]")
+```
 
 ### with Maven
+
+See https://bintray.com/arturbosch/generic/deps# -> `SET ME UP!`
 
 ```xml
 <dependency>
