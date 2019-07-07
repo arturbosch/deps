@@ -6,6 +6,21 @@
  
 Leverages maven-resolver to resolve transitive dependencies. 
 
+## Example
+
+```kotlin
+@Test
+fun `resolves junit and the transitive dependency hamcrest`() {
+    val deps = Deps()
+    val artifact = Artifact("junit:junit:4.12")
+
+    val paths: List<File> = deps.resolve(artifact)
+
+    assertTrue { paths.includes("junit-4.12.jar") }
+    assertTrue { paths.includes("hamcrest-core-1.3.jar") }
+}
+```
+
 ## Getting started
 
 ### with Gradle
@@ -35,18 +50,3 @@ See https://bintray.com/arturbosch/generic/deps# -> `SET ME UP!`
 - `git clone https://github.com/arturbosch/deps`
 - `cd deps`
 - `gradle build publishToMavenLocal`
-
-## Example
-
-```kotlin
-@Test
-fun `resolves junit and the transitive dependency hamcrest`() {
-    val deps = Deps()
-    val artifact = Artifact("junit:junit:4.12")
-
-    val paths: List<File> = deps.resolve(artifact)
-
-    assertTrue { paths.includes("junit-4.12.jar") }
-    assertTrue { paths.includes("hamcrest-core-1.3.jar") }
-}
-```
