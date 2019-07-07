@@ -46,8 +46,8 @@ publishJar {
         secretKey = project.properties["bintrayApiKey"]?.toString() ?: System.getenv("BINTRAY_API_KEY")
         repository = "generic"
         info {
-            githubRepo = "https://github.com/arturbosch/deps.git"
-            vcsUrl = "https://github.com/arturbosch/deps.git"
+            githubRepo = "https://github.com/arturbosch/deps"
+            vcsUrl = "https://github.com/arturbosch/deps"
             userOrg = "arturbosch"
             description = "Resolves transitive dependencies"
             license = "Apache-2.0"
