@@ -1,5 +1,6 @@
 # deps
 
+[![Build Status](https://travis-ci.org/arturbosch/deps.svg?branch=master)](https://travis-ci.org/arturbosch/deps)
 [ ![Download](https://api.bintray.com/packages/arturbosch/generic/deps/images/download.svg) ](https://bintray.com/arturbosch/generic/deps/_latestVersion)
  
 Leverages maven-resolver to resolve transitive dependencies. 
