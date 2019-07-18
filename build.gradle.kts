@@ -12,19 +12,20 @@ repositories {
 }
 
 group = "io.gitlab.arturbosch"
-version = "1.0.0"
+version = "1.0.1"
 
 dependencies {
-    api("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    implementation(platform("org.apache.maven.resolver:maven-resolver:1.4.0"))
-    implementation("org.apache.maven.resolver:maven-resolver-util")
-    implementation("org.apache.maven.resolver:maven-resolver-impl")
-    implementation("org.apache.maven.resolver:maven-resolver-spi")
-    implementation("org.apache.maven.resolver:maven-resolver-transport-file")
-    implementation("org.apache.maven.resolver:maven-resolver-transport-http")
-    implementation("org.apache.maven.resolver:maven-resolver-connector-basic")
-    implementation("org.apache.maven:maven-resolver-provider:3.6.1")
+    api(platform("org.apache.maven.resolver:maven-resolver:1.4.0"))
+    api("org.apache.maven.resolver:maven-resolver-api")
+    api("org.apache.maven.resolver:maven-resolver-util")
+    api("org.apache.maven.resolver:maven-resolver-impl")
+    api("org.apache.maven.resolver:maven-resolver-spi")
+    api("org.apache.maven.resolver:maven-resolver-transport-file")
+    api("org.apache.maven.resolver:maven-resolver-transport-http")
+    api("org.apache.maven.resolver:maven-resolver-connector-basic")
+    api("org.apache.maven:maven-resolver-provider:3.6.1")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
